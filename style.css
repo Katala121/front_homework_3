@@ -8,18 +8,24 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 .header_logo {
     width: 96px;
     height: 60px;
     margin-top: 57px;
     background: rgba(52, 84, 122, 0.8);
-    float: left;
 }
 
 .header_nav {
     margin-top: 79px;
-    margin-right: 29px;
-    float: right;
+    width: 611px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header_link {
@@ -43,10 +49,6 @@ a {
     color: #000000;
 }
 
-.header_nav a:not(:first-child) {
-    margin-left: 42px;
-}
-
 .centerized-container {
     max-width: 1181px;
     margin: 0 auto;
@@ -62,11 +64,22 @@ a {
     z-index: -1;
 }
 
-.design-section_img {
+.section-design {
+    display: flex;
+    margin-top: 140px;
+    justify-content: space-between;
+}
+
+.section-design_img {
+    display: flex;
+    justify-content: center;
+    width: 605px;
+}
+
+.section-design_img img {
     width: 357px;
     height: 233.7px;
-    float: left;
-    margin: 278px 30px 0 -11px;
+    margin-top: 28px;
 }
 
 .title-top {
@@ -77,12 +90,7 @@ a {
     margin: 0;
 }
 
-.design-section_text {
-    margin: 140px 0 0 0px;
-    float: right;
-}
-
-.design-section_text p {
+.section-design_text p {
     margin-top: 30px;
     width: 540px;
     height: 67px;
@@ -104,12 +112,17 @@ a {
     text-align: center;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    border: 0;
+}
+
+.section-about-me {
+    display: flex;
+    justify-content: center;
 }
 
 .section-about-me_block {
-    float: left;
     width: 540px;
-    margin: 265px 350px 200px;
+    margin: 265px 0 200px;
 }
 
 .section-about-me_title {
@@ -134,8 +147,13 @@ a {
 .section-numbers {
     background: #34547A;
     padding: 100px 0;
-    float: left;
+    /* float: left; */
     width: 100%;
+}
+
+.section-numbers_blocks {
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-numbers_block {
@@ -145,8 +163,7 @@ a {
     line-height: 26px;
     color: #FFFFFF;
     width: 141px;
-    float: left;
-    margin-left: 49px;
+    display: flex;
 }
 
 .section-numbers_project-num {
@@ -155,14 +172,21 @@ a {
     font-size: 21px;
     line-height: 25px;
     color: #FFFFFF;
-    float: left;
     margin: 0;
 }
 
 .section-numbers_img {
     width: 50px;
-    float: left;
     margin-right: 20px;
+}
+
+.section-numbers_block_value {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-numbers_block h3 {
+    margin-top: 3px;
 }
 
 .section-numbers_block p {
@@ -170,13 +194,16 @@ a {
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
-    float: right;
     margin: 0;
+}
+
+.section-my-skills {
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-my-skills_skills {
     width: 445px;
-    float: left;
     margin-top: 204px;
 }
 
@@ -215,14 +242,13 @@ a {
 
 .section-my-skills_photo {
     width: 555px;
-    float: right;
     margin-top: 122px;
     margin-bottom: 121px;
 }
 
 .section-video {
     background: #EEEFF1;
-    float: left;
+    display: flex;
     width: 100%;
 }
 
@@ -264,16 +290,17 @@ a {
 }
 
 .section-projects {
-    float: left;
     margin-top: 28px;
 }
 
 .section-projects_galery {
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .section-projects_project {
-    float: left;
     width: 337.75px;
     height: 337.75px;
 }
@@ -287,7 +314,6 @@ a {
     background-image: url(img/project1.png);
     width: 337.75px;
     height: 337.75px;
-    float: left;
     position: relative;
 }
 
@@ -299,8 +325,12 @@ a {
     transform: translate(-50%, -50%);
 }
 
+.section-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
 .section-icons_icon {
-    float: left;
     margin: 72px 0 100px 30px;
     width: 255px;
     height: 120px;
@@ -308,7 +338,7 @@ a {
 }
 
 .section-form {
-    float: left;
+    display: flex;
     background: #EEEFF1;
     width: 100%;
 }
@@ -393,13 +423,16 @@ a {
 }
 
 .footer {
-    float: left;
     background: #34547A;
+}
+
+.footer .centerized-container {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 }
 
 .footer_author {
-    float: left;
     margin: 50px;
     width: 193px;
 }
@@ -421,10 +454,6 @@ a {
     line-height: 12px;
     color: #FFFFFF;
     margin: 0;
-}
-
-.footer_logos {
-    float: right;
 }
 
 .footer_logos img {
